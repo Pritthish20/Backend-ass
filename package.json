@@ -12,8 +12,10 @@
     "test:watch": "vitest",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate:deploy": "prisma migrate deploy",
     "prisma:studio": "prisma studio",
-    "db:seed": "tsx prisma/seed.ts"
+    "db:seed": "tsx prisma/seed.ts",
+    "vercel-build": "npm run prisma:generate && npm run prisma:migrate:deploy"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
@@ -35,6 +37,7 @@
     "@fastify/swagger-ui": "^5.2.5",
     "@prisma/adapter-pg": "^7.6.0",
     "@prisma/client": "^7.6.0",
+    "@vercel/functions": "^2.2.13",
     "ajv": "^8.18.0",
     "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.0",

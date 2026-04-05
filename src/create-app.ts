@@ -21,20 +21,21 @@ type BuildAppOptions = {
 };
 
 export function buildApp(options: BuildAppOptions = {}) {
+  const usePrettyLogger = env.NODE_ENV === "development" && !process.env.VERCEL;
+
   const app = Fastify({
     disableRequestLogging: true,
-    logger:
-      env.NODE_ENV === "development"
-        ? {
-            transport: {
-              target: "pino-pretty",
-              options: {
-                translateTime: "SYS:standard",
-                ignore: "pid,hostname",
-              },
+    logger: usePrettyLogger
+      ? {
+          transport: {
+            target: "pino-pretty",
+            options: {
+              translateTime: "SYS:standard",
+              ignore: "pid,hostname",
             },
-          }
-        : true,
+          },
+        }
+      : true,
   });
 
   app.setValidatorCompiler(validatorCompiler);

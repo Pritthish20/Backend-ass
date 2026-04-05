@@ -239,6 +239,20 @@ Swagger docs:
 http://127.0.0.1:3000/docs
 ```
 
+## Live Deployment
+
+Live API:
+
+```text
+https://backend-ass-seven.vercel.app/
+```
+
+Hosted Swagger docs:
+
+```text
+https://backend-ass-seven.vercel.app/docs
+```
+
 ## Seeded Demo Users
 
 - Admin: `admin@finance.local` / `Admin@12345`
@@ -315,6 +329,14 @@ If someone wants to verify the project quickly:
 Swagger UI:
 
 - `GET /docs`
+
+Deployed API:
+
+- `https://backend-ass-seven.vercel.app/`
+
+Deployed Swagger UI:
+
+- `https://backend-ass-seven.vercel.app/docs`
 
 Postman collection included:
 

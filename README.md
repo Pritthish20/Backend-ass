@@ -376,7 +376,7 @@ In short:
 If you are evaluating the project, the most relevant files are:
 
 - `prisma/schema.prisma`
-- `src/app.ts`
+- `src/create-app.ts`
 - `src/lib/auth.ts`
 - `src/modules/users/routes.ts`
 - `src/modules/records/routes.ts`

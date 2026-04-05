@@ -3,7 +3,7 @@ import { Role } from "../src/generated/prisma/client.js";
 
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { buildApp } from "../src/app.js";
+import { buildApp } from "../src/create-app.js";
 import { hashPassword } from "../src/lib/password.js";
 
 const activeAdminUser = {

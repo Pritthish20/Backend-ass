@@ -1,3 +1,5 @@
+import "fastify";
+
 import { env } from "./config/env.js";
 import { buildApp } from "./create-app.js";
 
